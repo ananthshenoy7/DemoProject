@@ -39,7 +39,9 @@ public class TestUI extends utilities {
 
     @Then("^I should be taken to practice page$")
     public void i_should_be_taken_to_practice_page() throws Throwable {
-
+    	practicepage pp = new practicepage(driver);
+    	pp.singupbutton().isDisplayed();
+    		 
     }
 
     @And("^I click on Radio button$")

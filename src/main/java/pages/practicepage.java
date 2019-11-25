@@ -17,9 +17,14 @@ public class practicepage {
 	@FindBy(xpath="//*[@value='radio2']")
 	WebElement radiobutton2;
 	
+	@FindBy(xpath="/html/body/header/div/button[3]")
+	WebElement signup;
+	
 	public WebElement radiobutton2(){
 		return radiobutton2;
 	}
+		public WebElement singupbutton(){
+			return signup;
+		}
+	}
 	
-}
-;
