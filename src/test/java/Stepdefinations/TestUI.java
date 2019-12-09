@@ -13,6 +13,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.support.ui.Select;
 
 import Academy.utilities;
 
@@ -44,10 +45,14 @@ public class TestUI extends utilities {
     		 
     }
 
-    @And("^I click on Radio button$")
+    @And("^I perform all UI actions$")
     public void i_click_on_radio_button() throws Throwable {
         practicepage pp = new practicepage(driver);
         pp.radiobutton2().click();
+        pp.countriesfield().sendKeys("India");
+       Select S = new Select(pp.optiondropdown());
+       S.selectByIndex(2);
+        
     }
 
 }

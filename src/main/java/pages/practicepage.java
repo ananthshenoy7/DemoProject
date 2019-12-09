@@ -20,11 +20,27 @@ public class practicepage {
 	@FindBy(xpath="/html/body/header/div/button[3]")
 	WebElement signup;
 	
+	@FindBy(css="input[id='autocomplete']")
+	WebElement selectcountries;
+	
+	@FindBy(id="dropdown-class-example")
+    WebElement optiondropdown;
+	
 	public WebElement radiobutton2(){
 		return radiobutton2;
 	}
 		public WebElement singupbutton(){
 			return signup;
 		}
+		
+		public WebElement countriesfield(){
+			return selectcountries;
+		}
+		
+		public WebElement optiondropdown(){
+			return optiondropdown;
+		}
+		
+		
 	}
 	
