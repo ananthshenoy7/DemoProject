@@ -26,6 +26,18 @@ public class practicepage {
 	@FindBy(id="dropdown-class-example")
     WebElement optiondropdown;
 	
+	@FindBy(id="checkBoxOption2")
+	WebElement option_2;
+	
+	@FindBy(id="name")
+	WebElement name;
+	
+	@FindBy(id="alertbtn")
+	WebElement alertbutton;
+	
+	@FindBy(id="opentab")
+	WebElement opentab;
+	
 	public WebElement radiobutton2(){
 		return radiobutton2;
 	}
@@ -41,6 +53,21 @@ public class practicepage {
 			return optiondropdown;
 		}
 		
+		public WebElement option2(){
+			return option_2;
+		}
+		
+		public WebElement name(){
+		   return name;
+		}
+		
+		public WebElement alertbutton(){
+			return alertbutton;
+		}
+		
+		public WebElement opentab(){
+			return opentab;
+		}
 		
 	}
 	

@@ -10,7 +10,9 @@ import pages.homepage;
 import pages.practicepage;
 
 import java.io.FileInputStream;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 
 import org.junit.runner.RunWith;
 import org.openqa.selenium.support.ui.Select;
@@ -40,8 +42,8 @@ public class TestUI extends utilities {
 
     @Then("^I should be taken to practice page$")
     public void i_should_be_taken_to_practice_page() throws Throwable {
-    	practicepage pp = new practicepage(driver);
-    	pp.singupbutton().isDisplayed();
+       practicepage pp = new practicepage(driver);
+       pp.singupbutton().isDisplayed();
     		 
     }
 
@@ -50,9 +52,28 @@ public class TestUI extends utilities {
         practicepage pp = new practicepage(driver);
         pp.radiobutton2().click();
         pp.countriesfield().sendKeys("India");
-       Select S = new Select(pp.optiondropdown());
-       S.selectByIndex(2);
+        Select S = new Select(pp.optiondropdown());
+        S.selectByIndex(2);
+        pp.option2().click();
+        pp.name().sendKeys("ananth");
+        pp.alertbutton().click();
+        Thread.sleep(3000);
+        driver.switchTo().alert().accept();
+        pp.name().sendKeys("abcd");
+        pp.alertbutton().click();
+        Thread.sleep(3000);
+        driver.switchTo().alert().dismiss();
+        
+        pp.opentab().click();
+        
+       Set<String>ids= driver.getWindowHandles();
+       Iterator<String> it=ids.iterator();
+      String firstwindow= it.next();
+      String secondwindow=it.next();
+      driver.switchTo().window(secondwindow);
+      homepage hp= new homepage(driver);
+      hp.courses().click();
+      
         
     }
-
 }

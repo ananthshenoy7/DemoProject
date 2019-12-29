@@ -17,8 +17,16 @@ public class homepage {
 	@FindBy(xpath="//*[@id='homepage']/header/div[2]/div/nav/ul/li[5]/a")
 	WebElement practice;
 	
+	@FindBy(xpath="//*[@id='homepage']/header/div[2]/div/nav/ul/li[2]/a")
+	WebElement courses;
+	
 	public WebElement praticebutton()
 	{
 		return practice;
+	}
+	
+	public WebElement courses(){
+		
+		return courses;
 	}
 }
