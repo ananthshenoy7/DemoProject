@@ -20,6 +20,9 @@ public class homepage {
 	@FindBy(xpath="//*[@id='homepage']/header/div[2]/div/nav/ul/li[2]/a")
 	WebElement courses;
 	
+	@FindBy(xpath="//*[@id='homepage']/header/div[2]/div/nav/ul/li[4]/a")
+	WebElement interview;
+	
 	public WebElement praticebutton()
 	{
 		return practice;
@@ -28,5 +31,9 @@ public class homepage {
 	public WebElement courses(){
 		
 		return courses;
+	}
+	
+	public WebElement interview(){
+		return interview;
 	}
 }

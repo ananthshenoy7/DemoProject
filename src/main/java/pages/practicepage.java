@@ -1,8 +1,11 @@
 package pages;
 
+import java.awt.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 public class practicepage {
@@ -38,6 +41,16 @@ public class practicepage {
 	@FindBy(id="opentab")
 	WebElement opentab;
 	
+	@FindBy(id="openwindow")
+	WebElement openwindow;
+	
+	@FindBy(id="mousehover")
+	WebElement mousehover;
+	
+	@FindBy(xpath="/html/body/div[4]/div/fieldset/div/div/a[1]")
+	WebElement top;
+	
+	
 	public WebElement radiobutton2(){
 		return radiobutton2;
 	}
@@ -69,5 +82,18 @@ public class practicepage {
 			return opentab;
 		}
 		
-	}
+		public WebElement openwindow(){
+			return openwindow;
+		}
+		
+		public WebElement mousehover(){
+			return mousehover;
+		}
+		
+		public WebElement top(){
+			return top;
+		}
+		
+		}
+	
 	
